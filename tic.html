@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Boarding Pass</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background: #f0f0f0;
+        padding: 40px;
+      }
+
+      .ticket {
+        display: flex;
+        width: 720px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        overflow: hidden;
+      }
+
+      .left {
+        flex: 3;
+        background: url('https://example.com/your-image.jpg'); 
+        background-size: cover;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-right: 2px dashed;
+      }
+
+      .top-bar {
+        background: #0077b6;
+        color: white;
+        padding: 12px;
+        text-align: center;
+        border-radius: 6px;
+      }
+
+      .top-bar h4 {
+        font-size: 1rem;
+        margin-bottom: 3px;
+      }
+
+      .info-section {
+        background: rgba(255, 255, 255, 0.85);
+        padding: 15px;
+        border-radius: 6px;
+      }
+
+      .info-row{
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.9rem;
+        margin: 6px 0;
+      }
+
+      .flight-route {
+        font-size: 1.6rem;
+        font-weight: bold;
+        text-align: center;
+        margin: 15px 0;
+      }
+
+      .extras {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.9rem;
+        margin-top: 10px;
+      }
+
+      .extras .highlight {
+        color: #d00000;
+        font-weight: bold;
+      }
+
+      .barcode {
+        width: 40px;
+        height: 150px;
+        background: repeating-linear-gradient(
+          to bottom,
+          #000,
+          #000 2px,
+          #fff 2px,
+          #fff 4px
+        );
+        margin: 0; 
+      }
+
+      .right {
+        flex: 1;
+        background: #1f3b70;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .right .route {
+        font-size: 1rem;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .info {
+        font-size: 0.85rem;
+        line-height: 1.6;
+      }
+
+      .info .label {
+        color: #ccc;
+      }
+
+      .info .value {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      .row {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .bottom-barcode {
+        margin-top: 20px;
+        width: 100%;
+        height: 40px;
+        background: repeating-linear-gradient(
+          to right,
+          #fff,
+          #fff 1px,
+          #000 1px,
+          #000 3px
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ticket">
+      <div class="left">
+        <div class="top-bar">
+          <h4>BOARDING PASS</h4>
+          <span>AIRLINE COMPANY</span>
+        </div>
+        <div class="info-section">
+          <div class="label"><strong>Passenger</strong> </div>
+          <div class="value">John Doe</div>
+          <div class="label"><strong>Flight</strong></div>
+          <div class="value">AV 1A7</div>
+          <div class="label"><strong>Date</strong> </div>
+          <div class="value">04 MAY 2025</div>
+          <div class="label"><strong>Seat</strong> </div>
+          <div class="value">4B</div>
+          <div class="flight-route">LONDON ✈ TOKYO</div>
+          <div class="extras">
+            <div class="barcode"></div>
+            <div>Gate <span class="highlight">25A</span></div>
+            <div>Boarding<span class="highlight">06:30</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <div>
+          <div class="route">LONDON ✈ TOKYO</div>
+          <div class="info">
+            <div class="label">Passenger</div>
+            <div class="value">John Doe</div>
+
+            <div class="row">
+              <div>
+                <div class="label">Flight</div>
+                <div class="value">AV 1A7</div>
+              </div>
+              <div>
+                <div class="label">Seat</div>
+                <div class="value">4B</div>
+              </div>
+            </div>
+
+            <div>
+              <div class="label">Date</div>
+              <div class="value">27 JUN 2022</div>
+            </div>
+
+            <div>
+              <div class="label">Gate</div>
+              <div class="value">25A</div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-barcode"></div>
+      </div>
+    </div>
+  </body>
+</html>
